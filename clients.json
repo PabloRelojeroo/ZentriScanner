@@ -1,0 +1,93 @@
+{
+  "clients": [
+    {
+      "name": "Wurst Client",
+      "description": "Wurst Hacked Client (Fabric)",
+      "color": "Red",
+      "signatures": [
+        "net/wurstclient/",
+        "net.wurstclient.",
+        "WurstClient",
+        "WurstInitializer",
+        "HackList",
+        "KillauraHack",
+        "CrystalAuraHack",
+        "AltManagerScreen",
+        "TooManyHaxFile",
+        "wurst.mixins.json",
+        "wurst.accesswidener",
+        "assets/wurst/",
+        "dancingtaco"
+      ]
+    },
+    {
+      "name": "Meteor Client",
+      "description": "Meteor Client (Fabric)",
+      "color": "Cyan",
+      "signatures": [
+        "meteordevelopment/meteorclient/",
+        "meteordevelopment.meteorclient.",
+        "MeteorClient",
+        "MeteorExecutor",
+        "MeteorStarscript",
+        "MeteorRenderPipelines",
+        "BaritonePathManager",
+        "KillAura",
+        "CrystalAura",
+        "HighwayBuilder",
+        "ActiveModulesHud",
+        "MeteorToast",
+        "meteor-client.mixins.json"
+      ]
+    },
+    {
+      "name": "Prestige Client",
+      "description": "Prestige Hacked Client",
+      "color": "Magenta",
+      "signatures": [
+        "prestige/prestigeClient/",
+        "prestige.prestigeClient.",
+        "PrestigeClient",
+        "prestigeclient",
+        "dev/prestige/",
+        "dev.prestige."
+      ]
+    },
+    {
+      "name": "Impact Client",
+      "description": "Impact Hacked Client",
+      "color": "Yellow",
+      "signatures": [
+        "me/zero/client/",
+        "me.zero.client.",
+        "ImpactClient",
+        "baritone/api/",
+        "impact/client/"
+      ]
+    },
+    {
+      "name": "Doomsday Client",
+      "description": "Doomsday Injectable/Mod Client (Obfuscated)",
+      "color": "Magenta",
+      "signatures": [
+        "net/java/f",
+        "net/java/g",
+        "net/java/h",
+        "net/java/i",
+        "net/java/k",
+        "net/java/l",
+        "net/java/m",
+        "net/java/r",
+        "net/java/s",
+        "net/java/t",
+        "net/java/y",
+        "net.java.f",
+        "net.java.g",
+        "net.java.h",
+        "\"id\":\"dd\"",
+        "modId=\"dd\"",
+        "mod_d"
+      ]
+    }
+  ]
+}
