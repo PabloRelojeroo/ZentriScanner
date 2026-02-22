@@ -1,39 +1,45 @@
-# ZentriScanner (nombre en proceso)
+# ZentriScanner (SSTool) v4.0
 
-Esta es una herramienta muy simple que busca en el classpaths hacks clients, no es nada sofisticado, solo nos ahorra el trabajo de buscar los strings manualmente
+Una herramienta que desarrollé para prbarme a mi mismo, pero puede llegar a servir en el dia a dia :D
 
-## Como funciona?
-Simplemente analiza los procesos de java en busca de clases cargadas coincidentes con hacks clients conocidos, no es nada del otro mundo y es mega bypasseable
+## Características
 
-Los hacks clients conocidos se leen mediante un archivo json, donde se le indica el nombre de los hack clients + las clases del mismo (para ver sus clases facilmente se puede hacer ```jar -tf archivo.jar```)
+### Detección de Hack Clients
+- Escanea la memoria de procesos java en busca de clientes conocidos
+- Base de datos actualizable desde gitHub automáticamente
 
-Incluí un archivo clients.json como base, pero cualquier pull request que se haga en busca de adiciones la voy a aceptar sin problemas.
+### MISC Scanner
+Analisis completo de caracteristicas que pueden llevar a un bypass attempt.
 
-## Modulo doomsday completo
+- **Firewall CPL**: Verifica estado del firewall y reglas
+- **Hosts checker**: Detecta modificaciones sospechosas en el archivo hosts
+- **DisallowRun**: Verifica políticas de registro que bloquean programas
+- **Prefetch Aaalysis**: Analiza programas ejecutados recientemente (en beta)
+- **AutoRun**: Detecta programas de inicio automático (inservible)
+- **Antivirus detection**: Identifica software de seguridad instalado.
+- **BAM**: Analiza BAM.
+- **Recent files**: Revisa archivos recent.
 
-Quise experimentar con el journal entonces hice un modulo que busca doomsday, inspirado en el mitico DoomsdayFinder
+### Módulo Doomsday (Mejorado)
+Ahora el modulo busca non-jars, aparte de tener una buena taza de deteccion jiji
 
-
-### ACLARCION
-Esta tool es completamente bypasseable, el codigo de la misma por ahora va a ser publico, en dado caso de que tome relevancia lo voy a colutar y obfuscar por obvias razones
-
-
-# USO
-Para usarlo, recomiendo abrir un CMD como admin:
-
-```
-ZentriScanner.exe -report -v
-```
-Esto nos muestra el verbose de lo que está haciendo y lo que hace es dejarnos un reporte de lo encontrado en su carpeta raiz
 
 ```
-ZentriScanner.exe --doomsday -v
+
+## Uso
+
+Recomendado ejecutar como **administrador** para acceso completo.
+
+### Comandos principales:
+
+```bash
+ZentriScanner.exe -v -r # Hace el escaneo con verbose y un reporte TXT al finalizar
 ```
 
-Este comando activa el modulo completo de doomsday, usando todos los sistemas de deteccion del mismo que idee.
+### Argumentos:
 
-```
--v # Verbose: detalles del proceso que está haciendo
--report / -r # genera un reporte en TXT de los resultados
---doomsday #  Activa el modulo que intenta buscar doomsday mas a fondo
-```
+| Argumento | Descripción |
+|-----------|-------------|
+| `-v`, `--verbose` | Muestra detalles del proceso |
+| `-r`, `--report` | Genera un reporte en TXT |
+| `--offline` | No intenta descargar clients.json de internet |
